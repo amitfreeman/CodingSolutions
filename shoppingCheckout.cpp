@@ -37,8 +37,8 @@ int main(int argc, char** argv){
         return bill_amt;
     }
    
-    std::stringstream ss(argv[1]);
-    std::string word;
+   std::stringstream ss(argv[1]);
+   std::string word;
     /* count the frequency for each items */
     while(ss>>word){
         if(word==apple)
@@ -60,20 +60,22 @@ int main(int argc, char** argv){
     /* step 2: with discount
        - buy one, get one free on Apples
        - 3 for the price of 2 on oranges */
-    for(auto& m: shopping_list){
-        int div=0, quo=0;
-        if(m.first == apple){
-           div=m.second/2;  quo=m.second%2;
-           bill_amt+=(div*apple_price);
-           bill_amt+=(quo*apple_price);
-        }
-        else if(m.first == orange){
-           div=m.second/3; quo=m.second%3;
-           bill_amt+=(div*orange_price*2);
-           bill_amt+=(quo*orange_price);
-        }
-    }
+   for(auto& m: shopping_list){
+      int div=0, quo=0;
+      if(m.first == apple){
+         div=m.second/2;  quo=m.second%2;
+         bill_amt+=(div*apple_price);
+         bill_amt+=(quo*apple_price);
+      }
+      else if(m.first == orange){
+         div=m.second/3; quo=m.second%3;
+         bill_amt+=(div*orange_price*2);
+         bill_amt+=(quo*orange_price);
+      }
+   }
 
     std::cout<<"Final Bill Amount is: $"<<bill_amt<<std::endl;
-    return bill_amt;
+    /* return has to be in int only, so multiply by 100 
+        so actual value can be retrieved outside by dividing by 100*/
+   return bill_amt*100;
 }
