@@ -5,6 +5,7 @@ Given a m * n matrix of ones and zeros, return how many square submatrices have 
 Example 1:
 
 Input: matrix =
+
 [
   [0,1,1,1],
   
@@ -12,6 +13,7 @@ Input: matrix =
   
   [0,1,1,1]
 ]
+
 Output: 15
 Explanation: 
 There are 10 squares of side 1.
@@ -22,6 +24,7 @@ Total number of squares = 10 + 4 + 1 = 15.
 Example 2:
 
 Input: matrix = 
+
 [
   [1,0,1],
   
@@ -29,6 +32,7 @@ Input: matrix =
   
   [1,1,0]
 ]
+
 Output: 7
 Explanation: 
 There are 6 squares of side 1.  
