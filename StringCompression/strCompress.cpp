@@ -23,9 +23,7 @@ public:
                 {
                     strnum = to_string(pos);
                     for (int i = 0; i < strnum.length(); i++)
-                    {
                         chars[writer++] = strnum[i];
-                    }
                 }
             }
             else if (chars[reader] == ci)
@@ -39,9 +37,7 @@ public:
                 {
                     strnum = to_string(pos);
                     for (int i = 0; i < strnum.length(); i++)
-                    {
                         chars[writer++] = strnum[i];
-                    }
                 }
 
                 pos = 1;
